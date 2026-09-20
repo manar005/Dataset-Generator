@@ -1,0 +1,919 @@
+{
+  "disclaimer": "Distributions are controlled generator coverage, not real-world email prevalence.",
+  "agent_root": "C:\\Users\\ahmed\\Desktop\\AlbaPRJ\\AI-Phishing-Agent",
+  "count": 100,
+  "parsed": 100,
+  "parser_failures": [],
+  "extraction_failures": [],
+  "profile_distribution": {
+    "normal_authenticated": 21,
+    "authentication_problem": 18,
+    "plain_basic": 14,
+    "partially_authenticated": 18,
+    "attachment_bearing": 11,
+    "third_party_service": 18
+  },
+  "profile_label_distribution": {
+    "normal_authenticated|legitimate": 11,
+    "authentication_problem|legitimate": 6,
+    "plain_basic|legitimate": 7,
+    "partially_authenticated|legitimate": 8,
+    "attachment_bearing|legitimate": 5,
+    "third_party_service|legitimate": 9,
+    "authentication_problem|phishing": 12,
+    "plain_basic|phishing": 7,
+    "third_party_service|phishing": 9,
+    "attachment_bearing|phishing": 6,
+    "partially_authenticated|phishing": 10,
+    "normal_authenticated|phishing": 10
+  },
+  "coverage_level_distribution": {
+    "rich": 26,
+    "partial": 43,
+    "mostly_observable": 23,
+    "low": 8
+  },
+  "coverage_level_label_distribution": {
+    "rich|legitimate": 13,
+    "partial|legitimate": 18,
+    "mostly_observable|legitimate": 10,
+    "low|legitimate": 5,
+    "partial|phishing": 25,
+    "mostly_observable|phishing": 13,
+    "rich|phishing": 13,
+    "low|phishing": 3
+  },
+  "inferred_coverage_distribution": {
+    "rich": 41,
+    "mostly_observable": 14,
+    "partial": 37,
+    "low": 8
+  },
+  "inferred_coverage_by_label": {
+    "legitimate": {
+      "rich": 20,
+      "mostly_observable": 6,
+      "partial": 15,
+      "low": 5
+    },
+    "phishing": {
+      "partial": 22,
+      "rich": 21,
+      "mostly_observable": 8,
+      "low": 3
+    }
+  },
+  "rich_coverage": {
+    "count": 41,
+    "percent": 41.0
+  },
+  "partial_coverage": {
+    "count": 37,
+    "percent": 37.0
+  },
+  "low_coverage": {
+    "count": 8,
+    "percent": 8.0
+  },
+  "authentication_distributions": {
+    "legitimate": {
+      "header_spf_result=pass": 24,
+      "header_dkim_result=pass": 26,
+      "header_dmarc_result=pass": 17,
+      "header_spf_result=softfail": 4,
+      "header_dkim_result=fail": 2,
+      "header_dmarc_result=unknown": 23,
+      "header_spf_result=unknown": 17,
+      "header_dkim_result=unknown": 15,
+      "header_dmarc_result=fail": 4,
+      "header_spf_result=neutral": 1,
+      "header_dmarc_result=none": 1,
+      "header_dkim_result=neutral": 3,
+      "header_dmarc_result=softfail": 1
+    },
+    "phishing": {
+      "header_spf_result=fail": 4,
+      "header_dkim_result=unknown": 21,
+      "header_dmarc_result=unknown": 24,
+      "header_spf_result=unknown": 16,
+      "header_dmarc_result=fail": 5,
+      "header_spf_result=pass": 26,
+      "header_dkim_result=pass": 26,
+      "header_dmarc_result=pass": 19,
+      "header_spf_result=softfail": 4,
+      "header_dkim_result=fail": 5,
+      "header_dmarc_result=softfail": 1,
+      "header_spf_result=neutral": 4,
+      "header_dkim_result=temperror": 1,
+      "header_dmarc_result=permerror": 1,
+      "header_dmarc_result=none": 4,
+      "header_dkim_result=neutral": 1
+    }
+  },
+  "reply_to_and_return_path": {
+    "legitimate": {
+      "from_reply_to_address_mismatch=false": 12,
+      "from_reply_to_domain_mismatch=false": 27,
+      "from_return_path_domain_mismatch=false": 21,
+      "from_reply_to_address_mismatch=true": 19,
+      "from_reply_to_domain_mismatch=true": 4,
+      "from_return_path_domain_mismatch=true": 10,
+      "from_return_path_domain_mismatch=unknown": 15,
+      "from_reply_to_address_mismatch=unknown": 15,
+      "from_reply_to_domain_mismatch=unknown": 15
+    },
+    "phishing": {
+      "from_reply_to_address_mismatch=unknown": 20,
+      "from_reply_to_domain_mismatch=unknown": 20,
+      "from_return_path_domain_mismatch=unknown": 17,
+      "from_return_path_domain_mismatch=false": 22,
+      "from_reply_to_address_mismatch=true": 21,
+      "from_reply_to_domain_mismatch=true": 9,
+      "from_return_path_domain_mismatch=true": 15,
+      "from_reply_to_domain_mismatch=false": 25,
+      "from_reply_to_address_mismatch=false": 13
+    }
+  },
+  "missingness_by_label": {
+    "legitimate": {
+      "has_html": 14,
+      "attachments": 41,
+      "header_dmarc_result": 23,
+      "header_spf_result": 17,
+      "header_dkim_result": 15,
+      "from_return_path_domain_mismatch": 15,
+      "from_reply_to_address_mismatch": 15,
+      "from_reply_to_domain_mismatch": 15,
+      "has_reply_to": 15,
+      "urls": 15
+    },
+    "phishing": {
+      "header_dkim_result": 21,
+      "header_dmarc_result": 24,
+      "from_reply_to_address_mismatch": 20,
+      "from_reply_to_domain_mismatch": 20,
+      "from_return_path_domain_mismatch": 17,
+      "has_reply_to": 20,
+      "urls": 17,
+      "has_html": 22,
+      "attachments": 48,
+      "header_spf_result": 16
+    }
+  },
+  "presence_by_label": {
+    "legitimate": {
+      "header_spf_result": 29,
+      "header_dkim_result": 31,
+      "header_dmarc_result": 23,
+      "from_reply_to_address_mismatch": 31,
+      "from_reply_to_domain_mismatch": 31,
+      "from_return_path_domain_mismatch": 31,
+      "has_reply_to": 31,
+      "urls": 31,
+      "has_html": 32,
+      "attachments": 5,
+      "has_risky_attachment": 4
+    },
+    "phishing": {
+      "header_spf_result": 38,
+      "header_dmarc_result": 30,
+      "from_return_path_domain_mismatch": 37,
+      "urls": 37,
+      "has_html": 32,
+      "header_dkim_result": 33,
+      "from_reply_to_address_mismatch": 34,
+      "from_reply_to_domain_mismatch": 34,
+      "has_reply_to": 34,
+      "attachments": 6,
+      "has_risky_attachment": 2
+    }
+  },
+  "individual_feature_coverage": {
+    "subject": {
+      "non_default": 100
+    },
+    "body_plain": {
+      "non_default": 100
+    },
+    "header_spf_result": {
+      "non_default": 67
+    },
+    "header_dkim_result": {
+      "non_default": 64
+    },
+    "header_dmarc_result": {
+      "non_default": 53
+    },
+    "has_reply_to": {
+      "non_default": 65
+    },
+    "from_reply_to_address_mismatch": {
+      "non_default": 65
+    },
+    "from_reply_to_domain_mismatch": {
+      "non_default": 65
+    },
+    "from_return_path_domain_mismatch": {
+      "non_default": 68
+    },
+    "num_received_headers": {
+      "non_default": 95
+    },
+    "url_count": {
+      "non_default": 68
+    },
+    "unique_url_count": {
+      "non_default": 68
+    },
+    "url_length_max": {
+      "non_default": 68
+    },
+    "ip_url_count": {
+      "non_default": 9
+    },
+    "punycode_url_count": {
+      "non_default": 2
+    },
+    "attachment_count": {
+      "non_default": 11
+    },
+    "has_risky_attachment": {
+      "non_default": 6
+    },
+    "has_html": {
+      "non_default": 64
+    }
+  },
+  "joint_feature_coverage": {
+    "spf_dkim_dmarc_observable": 45,
+    "at_least_one_auth": 80,
+    "auth_and_reply_to": 60,
+    "auth_and_return_path": 65,
+    "auth_and_url": 62,
+    "auth_reply_to_url": 60,
+    "auth_reply_to_return_path_url": 51,
+    "html_and_url": 58,
+    "url_and_attachment": 5
+  },
+  "joint_feature_coverage_by_label": {
+    "legitimate": {
+      "spf_dkim_dmarc_observable": 21,
+      "at_least_one_auth": 35,
+      "auth_and_reply_to": 28,
+      "auth_and_return_path": 29,
+      "auth_and_url": 29,
+      "auth_reply_to_url": 28,
+      "auth_reply_to_return_path_url": 23,
+      "html_and_url": 28,
+      "url_and_attachment": 1
+    },
+    "phishing": {
+      "spf_dkim_dmarc_observable": 24,
+      "at_least_one_auth": 45,
+      "auth_and_reply_to": 32,
+      "auth_and_return_path": 36,
+      "auth_and_url": 33,
+      "auth_reply_to_url": 32,
+      "auth_reply_to_return_path_url": 28,
+      "html_and_url": 30,
+      "url_and_attachment": 4
+    }
+  },
+  "warnings": [
+    "class-exclusive header_spf_result: phishing-only values: ['fail']",
+    "class-exclusive header_dkim_result: phishing-only values: ['temperror']",
+    "class-exclusive header_dmarc_result: phishing-only values: ['permerror']"
+  ],
+  "email_features_schema": [
+    "subject",
+    "body_plain",
+    "header_spf_result",
+    "header_dkim_result",
+    "header_dmarc_result",
+    "has_reply_to",
+    "from_reply_to_address_mismatch",
+    "from_reply_to_domain_mismatch",
+    "from_return_path_domain_mismatch",
+    "num_received_headers",
+    "url_count",
+    "unique_url_count",
+    "url_length_max",
+    "ip_url_count",
+    "punycode_url_count",
+    "attachment_count",
+    "has_risky_attachment",
+    "has_html"
+  ],
+  "class_counts": {
+    "legitimate": 46,
+    "phishing": 54
+  },
+  "authentication_values_by_label": {
+    "legitimate": {
+      "header_spf_result": {
+        "pass": 24,
+        "softfail": 4,
+        "unknown": 17,
+        "neutral": 1
+      },
+      "header_dkim_result": {
+        "pass": 26,
+        "fail": 2,
+        "unknown": 15,
+        "neutral": 3
+      },
+      "header_dmarc_result": {
+        "pass": 17,
+        "unknown": 23,
+        "fail": 4,
+        "none": 1,
+        "softfail": 1
+      }
+    },
+    "phishing": {
+      "header_spf_result": {
+        "fail": 4,
+        "unknown": 16,
+        "pass": 26,
+        "softfail": 4,
+        "neutral": 4
+      },
+      "header_dkim_result": {
+        "unknown": 21,
+        "pass": 26,
+        "fail": 5,
+        "temperror": 1,
+        "neutral": 1
+      },
+      "header_dmarc_result": {
+        "unknown": 24,
+        "fail": 5,
+        "pass": 19,
+        "softfail": 1,
+        "permerror": 1,
+        "none": 4
+      }
+    }
+  },
+  "authentication_availability_by_label": {
+    "legitimate": {
+      "full": 21,
+      "partial": 14,
+      "none": 11
+    },
+    "phishing": {
+      "partial": 21,
+      "none": 9,
+      "full": 24
+    }
+  },
+  "reply_to_by_label": {
+    "legitimate": {
+      "present": 31,
+      "address_mismatch=false": 12,
+      "domain_mismatch=false": 27,
+      "address_mismatch=true": 19,
+      "domain_mismatch=true": 4,
+      "absent": 15,
+      "address_mismatch=unknown": 15,
+      "domain_mismatch=unknown": 15
+    },
+    "phishing": {
+      "absent": 20,
+      "address_mismatch=unknown": 20,
+      "domain_mismatch=unknown": 20,
+      "present": 34,
+      "address_mismatch=true": 21,
+      "domain_mismatch=true": 9,
+      "domain_mismatch=false": 25,
+      "address_mismatch=false": 13
+    }
+  },
+  "return_path_by_label": {
+    "legitimate": {
+      "false": 21,
+      "true": 10,
+      "unknown": 15
+    },
+    "phishing": {
+      "unknown": 17,
+      "false": 22,
+      "true": 15
+    }
+  },
+  "received_headers_by_label": {
+    "legitimate": {
+      "2": 15,
+      "1": 9,
+      "3": 12,
+      "4": 6,
+      "0": 4
+    },
+    "phishing": {
+      "1": 14,
+      "2": 23,
+      "3": 13,
+      "0": 1,
+      "4": 3
+    }
+  },
+  "url_distributions_by_label": {
+    "legitimate": {
+      "present": 31,
+      "count=2": 12,
+      "unique=1": 24,
+      "count=1": 12,
+      "none": 15,
+      "count=0": 15,
+      "unique=0": 15,
+      "count=6": 5,
+      "unique=3": 7,
+      "punycode": 2,
+      "count=3": 2,
+      "ip_host": 4
+    },
+    "phishing": {
+      "none": 17,
+      "count=0": 17,
+      "unique=0": 17,
+      "present": 37,
+      "count=1": 16,
+      "unique=1": 31,
+      "count=3": 2,
+      "unique=3": 5,
+      "count=2": 15,
+      "ip_host": 5,
+      "count=6": 3,
+      "count=4": 1,
+      "unique=2": 1
+    }
+  },
+  "url_length_max_by_label": {
+    "legitimate": {
+      "n": 31,
+      "max": 46.0,
+      "median": 30.0
+    },
+    "phishing": {
+      "n": 37,
+      "max": 35.0,
+      "median": 29.0
+    }
+  },
+  "attachments_by_label": {
+    "legitimate": {
+      "none": 41,
+      "not_risky": 42,
+      "present": 5,
+      "risky": 4
+    },
+    "phishing": {
+      "none": 48,
+      "not_risky": 52,
+      "present": 6,
+      "risky": 2
+    }
+  },
+  "format_by_label": {
+    "legitimate": {
+      "plain_only": 14,
+      "body_plain_populated": 46,
+      "html": 32
+    },
+    "phishing": {
+      "plain_only": 22,
+      "body_plain_populated": 54,
+      "html": 32
+    }
+  },
+  "intended_coverage_by_label": {
+    "legitimate": {
+      "rich": 13,
+      "partial": 18,
+      "mostly_observable": 10,
+      "low": 5
+    },
+    "phishing": {
+      "partial": 25,
+      "mostly_observable": 13,
+      "rich": 13,
+      "low": 3
+    }
+  },
+  "rich_percent_by_label": {
+    "legitimate": 43.48,
+    "phishing": 38.89
+  },
+  "partial_or_low_percent_by_label": {
+    "legitimate": 43.48,
+    "phishing": 46.3
+  },
+  "header_template_label_distribution": {
+    "from_addr_only+reply_addr_only+rp_bare+recv_esmtps+auth_arc_style+nospf|legitimate": 1,
+    "from_addr_only+reply_quoted+rp_bare+recv_esmtps+auth_semicolon+nospf|legitimate": 1,
+    "from_addr_only+reply_angle+norp+recv_short+noauth+nospf|legitimate": 1,
+    "from_addr_only+noreply+rp_angle+recv_esmtp+noauth+nospf|legitimate": 1,
+    "from_addr_only+reply_angle+norp+recv_esmtp+auth_semicolon+nospf|legitimate": 1,
+    "from_angle+reply_quoted+norp+recv_esmtp+noauth+nospf|legitimate": 1,
+    "from_angle+reply_quoted+rp_bare+recv_esmtp+auth_semicolon+nospf|legitimate": 1,
+    "from_angle+noreply+rp_bare+recv_esmtps+auth_semicolon+nospf|legitimate": 1,
+    "from_angle+noreply+norp+recv_short+auth_semicolon+nospf|legitimate": 1,
+    "from_addr_only+noreply+rp_angle+recv_short+auth_arc_style+nospf|legitimate": 1,
+    "from_quoted+reply_angle+rp_angle+recv_esmtp+auth_arc_style+nospf|legitimate": 1,
+    "from_quoted+noreply+rp_angle+recv_esmtp+auth_arc_style+nospf|legitimate": 1,
+    "from_angle+reply_quoted+rp_bare+recv_short+auth_arc_style+nospf|legitimate": 1,
+    "from_addr_only+reply_angle+norp+recv_esmtps+auth_semicolon+nospf|legitimate": 1,
+    "from_addr_only+reply_addr_only+rp_angle+recv_short+auth_arc_style+nospf|legitimate": 1,
+    "from_addr_only+reply_addr_only+norp+recv_short+auth_semicolon+nospf|legitimate": 1,
+    "from_quoted+noreply+norp+recv_esmtps+noauth+nospf|legitimate": 1,
+    "from_angle+reply_quoted+rp_angle+recv_short+auth_arc_style+nospf|legitimate": 1,
+    "from_addr_only+reply_addr_only+rp_bare+recv_esmtp+auth_semicolon+nospf|legitimate": 2,
+    "from_addr_only+reply_addr_only+rp_angle+recv_esmtp+auth_arc_style+nospf|legitimate": 1,
+    "from_angle+noreply+norp+recv_esmtp+noauth+nospf|legitimate": 1,
+    "from_quoted+reply_quoted+rp_angle+recv_esmtp+auth_arc_style+nospf|legitimate": 1,
+    "from_quoted+reply_angle+rp_angle+recv_esmtps+auth_arc_style+nospf|legitimate": 1,
+    "from_quoted+reply_angle+rp_angle+recv_short+auth_arc_style+nospf|legitimate": 1,
+    "from_quoted+noreply+rp_bare+recv_short+auth_arc_style+spf_short|legitimate": 1,
+    "from_addr_only+reply_angle+rp_angle+recv_short+auth_semicolon+spf_short|legitimate": 1,
+    "from_addr_only+reply_angle+norp+recv_esmtp+auth_arc_style+nospf|legitimate": 1,
+    "from_quoted+reply_quoted+norp+recv_short+noauth+nospf|legitimate": 1,
+    "from_angle+noreply+norp+recv_esmtps+noauth+nospf|legitimate": 2,
+    "from_angle+noreply+norp+recv_short+noauth+nospf|legitimate": 1,
+    "from_angle+noreply+rp_bare+recv_esmtps+auth_arc_style+nospf|legitimate": 1,
+    "from_addr_only+reply_angle+rp_bare+recv_esmtp+auth_semicolon+nospf|legitimate": 1,
+    "from_quoted+reply_addr_only+rp_angle+recv_esmtps+auth_semicolon+nospf|legitimate": 1,
+    "from_quoted+reply_quoted+rp_bare+recv_short+auth_arc_style+nospf|legitimate": 1,
+    "from_addr_only+reply_addr_only+norp+recv_esmtps+auth_semicolon+nospf|legitimate": 1,
+    "from_quoted+reply_angle+rp_bare+recv_esmtp+auth_arc_style+nospf|legitimate": 1,
+    "from_addr_only+reply_angle+rp_angle+recv_esmtps+auth_arc_style+nospf|legitimate": 1,
+    "from_addr_only+noreply+norp+recv_short+noauth+nospf|legitimate": 1,
+    "from_quoted+noreply+rp_bare+recv_esmtp+auth_arc_style+nospf|legitimate": 1,
+    "from_addr_only+reply_angle+rp_angle+recv_short+auth_semicolon+nospf|legitimate": 1,
+    "from_addr_only+noreply+rp_angle+recv_esmtps+noauth+nospf|legitimate": 1,
+    "from_quoted+reply_addr_only+rp_angle+recv_short+auth_arc_style+nospf|legitimate": 1,
+    "from_quoted+reply_quoted+rp_angle+recv_esmtps+auth_semicolon+nospf|legitimate": 1,
+    "from_angle+reply_quoted+rp_bare+recv_esmtp+auth_arc_style+nospf|legitimate": 1,
+    "from_angle+noreply+norp+recv_esmtps+auth_semicolon+spf_short|phishing": 1,
+    "from_angle+noreply+rp_bare+recv_esmtp+auth_semicolon+nospf|phishing": 1,
+    "from_quoted+noreply+norp+recv_esmtp+noauth+nospf|phishing": 1,
+    "from_angle+noreply+rp_angle+recv_esmtps+noauth+nospf|phishing": 1,
+    "from_angle+reply_angle+rp_bare+recv_esmtp+auth_semicolon+nospf|phishing": 1,
+    "from_addr_only+reply_addr_only+norp+recv_esmtps+noauth+nospf|phishing": 2,
+    "from_quoted+reply_quoted+rp_bare+recv_esmtp+auth_arc_style+nospf|phishing": 1,
+    "from_quoted+reply_quoted+rp_bare+recv_short+auth_arc_style+nospf|phishing": 1,
+    "from_quoted+reply_angle+rp_angle+recv_esmtps+auth_semicolon+nospf|phishing": 2,
+    "from_addr_only+reply_addr_only+rp_bare+recv_esmtps+auth_arc_style+nospf|phishing": 1,
+    "from_addr_only+reply_quoted+rp_bare+recv_esmtps+auth_arc_style+nospf|phishing": 2,
+    "from_addr_only+reply_angle+rp_bare+recv_esmtp+auth_arc_style+nospf|phishing": 2,
+    "from_quoted+reply_addr_only+rp_angle+recv_esmtps+auth_semicolon+nospf|phishing": 1,
+    "from_quoted+reply_angle+rp_angle+recv_esmtps+auth_arc_style+spf_short|phishing": 1,
+    "from_angle+reply_angle+rp_bare+recv_esmtp+auth_arc_style+nospf|phishing": 1,
+    "from_quoted+reply_addr_only+norp+recv_esmtps+auth_semicolon+nospf|phishing": 1,
+    "from_quoted+reply_quoted+norp+recv_short+auth_semicolon+nospf|phishing": 1,
+    "from_angle+reply_quoted+rp_bare+recv_esmtps+auth_semicolon+nospf|phishing": 1,
+    "from_addr_only+reply_quoted+rp_bare+recv_short+auth_arc_style+nospf|phishing": 1,
+    "from_quoted+noreply+rp_angle+recv_esmtp+auth_semicolon+nospf|phishing": 1,
+    "from_addr_only+noreply+norp+recv_esmtps+noauth+nospf|phishing": 1,
+    "from_addr_only+reply_quoted+rp_angle+recv_short+auth_arc_style+nospf|phishing": 1,
+    "from_quoted+reply_angle+rp_bare+recv_short+auth_semicolon+nospf|phishing": 1,
+    "from_angle+reply_addr_only+rp_angle+recv_esmtps+auth_semicolon+spf_paren|phishing": 1,
+    "from_angle+noreply+rp_angle+recv_esmtps+auth_arc_style+nospf|phishing": 2,
+    "from_quoted+noreply+norp+recv_short+noauth+nospf|phishing": 1,
+    "from_addr_only+reply_quoted+rp_bare+recv_esmtp+auth_arc_style+nospf|phishing": 1,
+    "from_angle+noreply+norp+recv_esmtps+noauth+nospf|phishing": 2,
+    "from_addr_only+noreply+rp_angle+recv_esmtp+auth_semicolon+spf_short|phishing": 1,
+    "from_addr_only+reply_quoted+rp_angle+recv_esmtp+auth_arc_style+nospf|phishing": 1,
+    "from_angle+noreply+rp_bare+recv_short+auth_arc_style+nospf|phishing": 1,
+    "from_quoted+reply_quoted+norp+recv_esmtp+auth_semicolon+nospf|phishing": 1,
+    "from_angle+reply_addr_only+rp_angle+recv_esmtp+auth_arc_style+nospf|phishing": 1,
+    "from_addr_only+reply_angle+rp_angle+recv_short+auth_semicolon+nospf|phishing": 1,
+    "from_addr_only+reply_angle+rp_angle+recv_short+auth_arc_style+nospf|phishing": 1,
+    "from_addr_only+noreply+norp+recv_esmtp+noauth+nospf|phishing": 1,
+    "from_quoted+reply_quoted+rp_angle+recv_short+auth_arc_style+nospf|phishing": 1,
+    "from_quoted+reply_addr_only+rp_angle+recv_short+auth_arc_style+nospf|phishing": 1,
+    "from_quoted+noreply+norp+recv_esmtps+auth_arc_style+spf_paren|phishing": 1,
+    "from_angle+reply_angle+norp+recv_esmtps+auth_semicolon+nospf|phishing": 1,
+    "from_angle+noreply+rp_bare+recv_esmtps+auth_arc_style+nospf|phishing": 1,
+    "from_addr_only+noreply+rp_angle+recv_esmtp+auth_arc_style+nospf|phishing": 1,
+    "from_angle+noreply+norp+recv_esmtp+auth_semicolon+nospf|phishing": 2,
+    "from_angle+reply_quoted+rp_angle+recv_short+auth_semicolon+nospf|phishing": 1,
+    "from_quoted+reply_angle+rp_bare+recv_esmtps+auth_semicolon+nospf|phishing": 1,
+    "from_addr_only+noreply+norp+recv_esmtp+auth_arc_style+nospf|phishing": 1,
+    "from_angle+reply_quoted+rp_angle+recv_short+auth_arc_style+nospf|phishing": 1
+  },
+  "body_template_label_distribution": {
+    "plain_spaced+html_div|legitimate": 16,
+    "plain_verbatim+html_div|legitimate": 15,
+    "plain_spaced+html_pre|legitimate": 8,
+    "plain_verbatim+html_pre|legitimate": 7,
+    "plain_spaced+html_div|phishing": 10,
+    "plain_spaced+html_pre|phishing": 14,
+    "plain_verbatim+html_div|phishing": 15,
+    "plain_verbatim+html_pre|phishing": 15
+  },
+  "shortcut_audit": {
+    "class_exclusive_values": [],
+    "severe_rate_gaps": [],
+    "notable_rate_gaps": [],
+    "header_templates_partitioned_by_label": false,
+    "body_templates_partitioned_by_label": false,
+    "shared_header_template_count": 8,
+    "shared_body_template_count": 4,
+    "profiles_missing_from_label": {
+      "legitimate": [],
+      "phishing": []
+    },
+    "coverage_missing_from_label": {
+      "legitimate": [],
+      "phishing": []
+    },
+    "warnings": [
+      "class-exclusive header_spf_result: phishing-only values: ['fail']",
+      "class-exclusive header_dkim_result: phishing-only values: ['temperror']",
+      "class-exclusive header_dmarc_result: phishing-only values: ['permerror']"
+    ],
+    "note": "Moderate profile-weight differences are expected construction choices, not automatically label shortcuts."
+  },
+  "text_artifact_audit": {
+    "counts": {
+      "html_deleted_marker": {
+        "legitimate": {
+          "rows": 2,
+          "hits": 2
+        },
+        "phishing": {
+          "rows": 0,
+          "hits": 0
+        }
+      },
+      "brace_anon_token": {
+        "legitimate": {
+          "rows": 0,
+          "hits": 0
+        },
+        "phishing": {
+          "rows": 0,
+          "hits": 0
+        }
+      },
+      "square_bracket_span": {
+        "legitimate": {
+          "rows": 15,
+          "hits": 43
+        },
+        "phishing": {
+          "rows": 4,
+          "hits": 4
+        }
+      }
+    },
+    "examples": [
+      {
+        "pattern": "square_bracket_span",
+        "label": "legitimate",
+        "sample": "[9fans]"
+      },
+      {
+        "pattern": "html_deleted_marker",
+        "label": "legitimate",
+        "sample": "[ HTML version deleted]"
+      },
+      {
+        "pattern": "square_bracket_span",
+        "label": "legitimate",
+        "sample": "[R]"
+      },
+      {
+        "pattern": "square_bracket_span",
+        "label": "legitimate",
+        "sample": "[9fans]"
+      },
+      {
+        "pattern": "square_bracket_span",
+        "label": "legitimate",
+        "sample": "[9fans]"
+      },
+      {
+        "pattern": "square_bracket_span",
+        "label": "legitimate",
+        "sample": "[9fans]"
+      },
+      {
+        "pattern": "square_bracket_span",
+        "label": "legitimate",
+        "sample": "[16]"
+      },
+      {
+        "pattern": "square_bracket_span",
+        "label": "legitimate",
+        "sample": "[N]"
+      },
+      {
+        "pattern": "square_bracket_span",
+        "label": "legitimate",
+        "sample": "[+ Read More]"
+      },
+      {
+        "pattern": "square_bracket_span",
+        "label": "legitimate",
+        "sample": "[R]"
+      }
+    ],
+    "class_dependent": [
+      {
+        "pattern": "square_bracket_span",
+        "row_rate_legitimate": 0.3261,
+        "row_rate_phishing": 0.0741,
+        "note": "Reported only; Stage 2.5 left these source-text residues in place."
+      }
+    ],
+    "note": "Mailing-list/citation brackets and rare HTML-deleted notes were intentionally kept in real seed text. They are not removed here."
+  },
+  "intent_vs_observed": {
+    "mismatch_count": 0,
+    "mismatches": []
+  },
+  "content_preservation": {
+    "checked": true,
+    "subject_mismatches": 0,
+    "body_prefix_missing": 0,
+    "examples": []
+  },
+  "url_count_audit": {
+    "observed_url_count_distribution": {
+      "0": 32,
+      "1": 28,
+      "2": 27,
+      "3": 4,
+      "4": 1,
+      "6": 8
+    },
+    "observed_url_count_by_rendering_mode": {
+      "none": {
+        "0": 32
+      },
+      "plain": {
+        "1": 7,
+        "2": 3
+      },
+      "html": {
+        "1": 21,
+        "3": 4
+      },
+      "alternative": {
+        "2": 24,
+        "4": 1,
+        "6": 8
+      }
+    },
+    "unique_url_matches": 100,
+    "flagged": [],
+    "flagged_count": 0,
+    "note": "Agent url_count may be about 2\u00d7 logical URLs for multipart/alternative. 4\u00d7/12\u00d7 peaks are generator duplication, not realistic MIME alternatives."
+  },
+  "pilot": {
+    "fraction": 0.05,
+    "random_seed": 20260920,
+    "seed_csv": "C:\\Users\\ahmed\\Desktop\\AlbaPRJ\\Dataset-Generator\\data\\seeds\\content_seeds.csv",
+    "selected_seed_ids": [
+      "seed_legit_0008",
+      "seed_legit_0010",
+      "seed_legit_0016",
+      "seed_legit_0027",
+      "seed_legit_0034",
+      "seed_legit_0051",
+      "seed_legit_0073",
+      "seed_legit_0097",
+      "seed_legit_0108",
+      "seed_legit_0132",
+      "seed_legit_0137",
+      "seed_legit_0158",
+      "seed_legit_0220",
+      "seed_legit_0295",
+      "seed_legit_0371",
+      "seed_legit_0396",
+      "seed_legit_0405",
+      "seed_legit_0412",
+      "seed_legit_0435",
+      "seed_legit_0472",
+      "seed_legit_0500",
+      "seed_legit_0510",
+      "seed_legit_0542",
+      "seed_legit_0552",
+      "seed_legit_0595",
+      "seed_legit_0605",
+      "seed_legit_0617",
+      "seed_legit_0676",
+      "seed_legit_0679",
+      "seed_legit_0704",
+      "seed_legit_0734",
+      "seed_legit_0735",
+      "seed_legit_0743",
+      "seed_legit_0746",
+      "seed_legit_0752",
+      "seed_legit_0755",
+      "seed_legit_0762",
+      "seed_legit_0765",
+      "seed_legit_0770",
+      "seed_legit_0778",
+      "seed_legit_0829",
+      "seed_legit_0833",
+      "seed_legit_0840",
+      "seed_legit_0862",
+      "seed_legit_0866",
+      "seed_legit_0912",
+      "seed_phish_0016",
+      "seed_phish_0101",
+      "seed_phish_0127",
+      "seed_phish_0159",
+      "seed_phish_0164",
+      "seed_phish_0171",
+      "seed_phish_0184",
+      "seed_phish_0248",
+      "seed_phish_0256",
+      "seed_phish_0263",
+      "seed_phish_0273",
+      "seed_phish_0303",
+      "seed_phish_0308",
+      "seed_phish_0317",
+      "seed_phish_0321",
+      "seed_phish_0325",
+      "seed_phish_0344",
+      "seed_phish_0353",
+      "seed_phish_0387",
+      "seed_phish_0422",
+      "seed_phish_0429",
+      "seed_phish_0430",
+      "seed_phish_0444",
+      "seed_phish_0450",
+      "seed_phish_0474",
+      "seed_phish_0480",
+      "seed_phish_0498",
+      "seed_phish_0504",
+      "seed_phish_0510",
+      "seed_phish_0511",
+      "seed_phish_0516",
+      "seed_phish_0517",
+      "seed_phish_0571",
+      "seed_phish_0585",
+      "seed_phish_0586",
+      "seed_phish_0597",
+      "seed_phish_0645",
+      "seed_phish_0652",
+      "seed_phish_0654",
+      "seed_phish_0656",
+      "seed_phish_0714",
+      "seed_phish_0811",
+      "seed_phish_0821",
+      "seed_phish_0851",
+      "seed_phish_0854",
+      "seed_phish_0916",
+      "seed_phish_0917",
+      "seed_phish_0934",
+      "seed_phish_0956",
+      "seed_phish_1024",
+      "seed_phish_1048",
+      "seed_phish_1054",
+      "seed_phish_1059",
+      "seed_phish_1085"
+    ],
+    "class_counts": {
+      "legitimate": 46,
+      "phishing": 54
+    },
+    "planned_profile_allocation": {
+      "legitimate": {
+        "normal_authenticated": 11,
+        "third_party_service": 9,
+        "partially_authenticated": 8,
+        "authentication_problem": 6,
+        "plain_basic": 7,
+        "attachment_bearing": 5
+      },
+      "phishing": {
+        "normal_authenticated": 10,
+        "third_party_service": 9,
+        "partially_authenticated": 10,
+        "authentication_problem": 12,
+        "plain_basic": 7,
+        "attachment_bearing": 6
+      }
+    },
+    "validation": {
+      "ok": true,
+      "count": 100,
+      "labels": {
+        "legitimate": 46,
+        "phishing": 54
+      },
+      "profiles": {
+        "normal_authenticated": 21,
+        "authentication_problem": 18,
+        "plain_basic": 14,
+        "partially_authenticated": 18,
+        "attachment_bearing": 11,
+        "third_party_service": 18
+      }
+    }
+  }
+}

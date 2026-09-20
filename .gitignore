@@ -1,0 +1,53 @@
+# Generated corpus (keep the folder, ignore generated files)
+output/*
+!output/.gitkeep
+!output/seed_preparation_report.json
+!output/pilot/
+output/pilot/**
+!output/pilot/.gitkeep
+!output/pilot/quality_report.json
+!output/pilot/pilot_selection.json
+!output/full/
+output/full/**
+!output/full/.gitkeep
+!output/full/quality_report.json
+
+# Local seed datasets (keep the folder, ignore corpus files)
+data/seeds/*
+!data/seeds/.gitkeep
+
+# Virtual environments
+.venv/
+venv/
+env/
+.env/
+ENV/
+
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Development-only generator batches (not the training corpus)
+tests/_dev_batch/
+
+# Local temporary files
+*.tmp
+*.temp
+*.log
+.DS_Store
+Thumbs.db
+*~
+*.swp
+
+# Environment / editor
+.env
+.env.*
+.idea/
+.vscode/

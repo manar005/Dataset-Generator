@@ -1,0 +1,507 @@
+{
+  "disclaimer": "Seed counts and source mix are dataset-construction choices, not real-world phishing prevalence.",
+  "source_path": "C:\\Users\\ahmed\\Desktop\\AlbaPRJ\\Archive\\meajor_dataset.csv",
+  "random_seed": 20260920,
+  "original_rows_read": 108684,
+  "original_usable_counts": {
+    "legitimate": 60317,
+    "phishing": 47518
+  },
+  "english_usable_counts": {
+    "legitimate": 60044,
+    "phishing": 43224
+  },
+  "english_filter": "language field tokens are all 'en' (e.g. en, en;en)",
+  "placeholder_cleanup": {
+    "method": "Label-agnostic removal of recognized MeAJOR anonymization tokens and live operational URLs, then whitespace/punctuation normalization. No semantically informative replacement tokens and no URL insertion.",
+    "rows_affected": 102213,
+    "rows_dropped_unusable_after_cleanup": 536,
+    "rows_dropped_unusable_after_cleanup_by_label": {
+      "phishing": 275,
+      "legitimate": 261
+    },
+    "placeholder_counts_before": {
+      "token_counts_by_label": {
+        "legitimate": {
+          "[URL]": 31045,
+          "[EMAIL_ADDRESS]": 28092,
+          "[NAME]": 180221,
+          "[ORGANIZATION]": 185975,
+          "[PRODUCT]": 139923,
+          "[FINANCIAL_INFO]": 59398,
+          "[PHONE_NUMBER]": 25462,
+          "<|SIMBOL|>": 49,
+          "<|EMOJI|>": 2773
+        },
+        "phishing": {
+          "[URL]": 15838,
+          "[EMAIL_ADDRESS]": 6407,
+          "[NAME]": 68968,
+          "[ORGANIZATION]": 119003,
+          "[PRODUCT]": 159686,
+          "[FINANCIAL_INFO]": 174095,
+          "[PHONE_NUMBER]": 5189,
+          "<|SIMBOL|>": 19947,
+          "<|EMOJI|>": 13513
+        }
+      },
+      "row_counts_by_label": {
+        "legitimate": {
+          "[NAME]": 47585,
+          "[ORGANIZATION]": 35039,
+          "[URL]": 11998,
+          "[EMAIL_ADDRESS]": 13640,
+          "[PHONE_NUMBER]": 11504,
+          "[FINANCIAL_INFO]": 8790,
+          "[PRODUCT]": 14778,
+          "<|EMOJI|>": 593,
+          "<|SIMBOL|>": 45
+        },
+        "phishing": {
+          "<|SIMBOL|>": 1017,
+          "<|EMOJI|>": 2156,
+          "[PRODUCT]": 15801,
+          "[FINANCIAL_INFO]": 16904,
+          "[ORGANIZATION]": 20845,
+          "[NAME]": 18697,
+          "[URL]": 7865,
+          "[PHONE_NUMBER]": 2752,
+          "[EMAIL_ADDRESS]": 4496
+        }
+      },
+      "live_urls_before_rewrite": {
+        "legitimate": {
+          "urls": 1,
+          "rows": 1
+        },
+        "phishing": {
+          "urls": 1,
+          "rows": 1
+        }
+      },
+      "suspicious_class_dependent_placeholders": [
+        {
+          "placeholder": "[NAME]",
+          "row_rate_legitimate": 0.7925,
+          "row_rate_phishing": 0.4326,
+          "note": "Class-dependent placeholder rate in source text before cleanup."
+        }
+      ]
+    },
+    "placeholder_counts_after": {
+      "token_counts_by_label": {
+        "legitimate": {
+          "[URL]": 0,
+          "[EMAIL_ADDRESS]": 0,
+          "[NAME]": 0,
+          "[ORGANIZATION]": 0,
+          "[PRODUCT]": 0,
+          "[FINANCIAL_INFO]": 0,
+          "[PHONE_NUMBER]": 0,
+          "<|SIMBOL|>": 0,
+          "<|EMOJI|>": 0
+        },
+        "phishing": {
+          "[URL]": 0,
+          "[EMAIL_ADDRESS]": 0,
+          "[NAME]": 0,
+          "[ORGANIZATION]": 0,
+          "[PRODUCT]": 0,
+          "[FINANCIAL_INFO]": 0,
+          "[PHONE_NUMBER]": 0,
+          "<|SIMBOL|>": 0,
+          "<|EMOJI|>": 0
+        }
+      },
+      "row_counts_by_label": {
+        "legitimate": {},
+        "phishing": {}
+      },
+      "live_urls_before_rewrite": {
+        "legitimate": {
+          "urls": 0,
+          "rows": 0
+        },
+        "phishing": {
+          "urls": 0,
+          "rows": 0
+        }
+      },
+      "suspicious_class_dependent_placeholders": []
+    },
+    "recognized_placeholders_remaining": false
+  },
+  "chosen_target_total": 2003,
+  "final_legitimate_count": 917,
+  "final_phishing_count": 1086,
+  "final_class_percentages": {
+    "legitimate": 45.78,
+    "phishing": 54.22
+  },
+  "planned_profile_allocation": {
+    "legitimate": {
+      "normal_authenticated": 220,
+      "third_party_service": 174,
+      "partially_authenticated": 165,
+      "authentication_problem": 119,
+      "plain_basic": 147,
+      "attachment_bearing": 92
+    },
+    "phishing": {
+      "normal_authenticated": 196,
+      "third_party_service": 174,
+      "partially_authenticated": 195,
+      "authentication_problem": 239,
+      "plain_basic": 152,
+      "attachment_bearing": 130
+    }
+  },
+  "duplicate_removals": {
+    "exact_duplicate_rows_removed_by_label": {
+      "legitimate": 2819,
+      "phishing": 1268
+    },
+    "conflicting_label_duplicate_rows_excluded": 0,
+    "conflicting_label_duplicate_groups": 0
+  },
+  "near_duplicate_statistics": {
+    "method": "lowercase alphanumeric prefix of subject+body (280 chars) after stripping [placeholders] and <|tokens|>",
+    "clusters_total": 95545,
+    "clusters_with_more_than_one": 1416,
+    "largest_cluster": 49,
+    "rows_dropped_by_cluster_cap": 3100,
+    "max_kept_per_cluster": 1
+  },
+  "source_label_availability_english_usable": {
+    "trec5": {
+      "legitimate": 29494,
+      "phishing": 16654
+    },
+    "trec6": {
+      "legitimate": 11121,
+      "phishing": 3065
+    },
+    "trec7": {
+      "phishing": 23505,
+      "legitimate": 19429
+    }
+  },
+  "source_label_selected_counts": {
+    "trec5": {
+      "phishing": 362,
+      "legitimate": 306
+    },
+    "trec6": {
+      "phishing": 362,
+      "legitimate": 305
+    },
+    "trec7": {
+      "legitimate": 306,
+      "phishing": 362
+    }
+  },
+  "placeholder_frequency_by_label": {
+    "before_cleanup": {
+      "token_counts_by_label": {
+        "legitimate": {
+          "[URL]": 31045,
+          "[EMAIL_ADDRESS]": 28092,
+          "[NAME]": 180221,
+          "[ORGANIZATION]": 185975,
+          "[PRODUCT]": 139923,
+          "[FINANCIAL_INFO]": 59398,
+          "[PHONE_NUMBER]": 25462,
+          "<|SIMBOL|>": 49,
+          "<|EMOJI|>": 2773
+        },
+        "phishing": {
+          "[URL]": 15838,
+          "[EMAIL_ADDRESS]": 6407,
+          "[NAME]": 68968,
+          "[ORGANIZATION]": 119003,
+          "[PRODUCT]": 159686,
+          "[FINANCIAL_INFO]": 174095,
+          "[PHONE_NUMBER]": 5189,
+          "<|SIMBOL|>": 19947,
+          "<|EMOJI|>": 13513
+        }
+      },
+      "row_counts_by_label": {
+        "legitimate": {
+          "[NAME]": 47585,
+          "[ORGANIZATION]": 35039,
+          "[URL]": 11998,
+          "[EMAIL_ADDRESS]": 13640,
+          "[PHONE_NUMBER]": 11504,
+          "[FINANCIAL_INFO]": 8790,
+          "[PRODUCT]": 14778,
+          "<|EMOJI|>": 593,
+          "<|SIMBOL|>": 45
+        },
+        "phishing": {
+          "<|SIMBOL|>": 1017,
+          "<|EMOJI|>": 2156,
+          "[PRODUCT]": 15801,
+          "[FINANCIAL_INFO]": 16904,
+          "[ORGANIZATION]": 20845,
+          "[NAME]": 18697,
+          "[URL]": 7865,
+          "[PHONE_NUMBER]": 2752,
+          "[EMAIL_ADDRESS]": 4496
+        }
+      },
+      "live_urls_before_rewrite": {
+        "legitimate": {
+          "urls": 1,
+          "rows": 1
+        },
+        "phishing": {
+          "urls": 1,
+          "rows": 1
+        }
+      },
+      "suspicious_class_dependent_placeholders": [
+        {
+          "placeholder": "[NAME]",
+          "row_rate_legitimate": 0.7925,
+          "row_rate_phishing": 0.4326,
+          "note": "Class-dependent placeholder rate in source text before cleanup."
+        }
+      ]
+    },
+    "after_cleanup": {
+      "token_counts_by_label": {
+        "legitimate": {
+          "[URL]": 0,
+          "[EMAIL_ADDRESS]": 0,
+          "[NAME]": 0,
+          "[ORGANIZATION]": 0,
+          "[PRODUCT]": 0,
+          "[FINANCIAL_INFO]": 0,
+          "[PHONE_NUMBER]": 0,
+          "<|SIMBOL|>": 0,
+          "<|EMOJI|>": 0
+        },
+        "phishing": {
+          "[URL]": 0,
+          "[EMAIL_ADDRESS]": 0,
+          "[NAME]": 0,
+          "[ORGANIZATION]": 0,
+          "[PRODUCT]": 0,
+          "[FINANCIAL_INFO]": 0,
+          "[PHONE_NUMBER]": 0,
+          "<|SIMBOL|>": 0,
+          "<|EMOJI|>": 0
+        }
+      },
+      "row_counts_by_label": {
+        "legitimate": {},
+        "phishing": {}
+      },
+      "live_urls_before_rewrite": {
+        "legitimate": {
+          "urls": 0,
+          "rows": 0
+        },
+        "phishing": {
+          "urls": 0,
+          "rows": 0
+        }
+      },
+      "suspicious_class_dependent_placeholders": []
+    }
+  },
+  "text_length_statistics": {
+    "legitimate": {
+      "count": 917,
+      "subject_present_pct": 96.29,
+      "body_present_pct": 100.0,
+      "median_subject_length": 26.0,
+      "median_body_length": 733.0,
+      "body_length_distribution": {
+        "0-99": 36,
+        "100-399": 220,
+        "400-999": 339,
+        "1000-2999": 284,
+        "3000+": 38
+      }
+    },
+    "phishing": {
+      "count": 1086,
+      "subject_present_pct": 98.53,
+      "body_present_pct": 100.0,
+      "median_subject_length": 26.0,
+      "median_body_length": 682.0,
+      "body_length_distribution": {
+        "0-99": 75,
+        "100-399": 265,
+        "400-999": 390,
+        "1000-2999": 306,
+        "3000+": 50
+      }
+    }
+  },
+  "remaining_source_artifacts": {
+    "recognized_placeholders_remaining": false,
+    "recognized_placeholder_audit": {
+      "token_counts_by_label": {
+        "legitimate": {
+          "[URL]": 0,
+          "[EMAIL_ADDRESS]": 0,
+          "[NAME]": 0,
+          "[ORGANIZATION]": 0,
+          "[PRODUCT]": 0,
+          "[FINANCIAL_INFO]": 0,
+          "[PHONE_NUMBER]": 0,
+          "<|SIMBOL|>": 0,
+          "<|EMOJI|>": 0
+        },
+        "phishing": {
+          "[URL]": 0,
+          "[EMAIL_ADDRESS]": 0,
+          "[NAME]": 0,
+          "[ORGANIZATION]": 0,
+          "[PRODUCT]": 0,
+          "[FINANCIAL_INFO]": 0,
+          "[PHONE_NUMBER]": 0,
+          "<|SIMBOL|>": 0,
+          "<|EMOJI|>": 0
+        }
+      },
+      "row_counts_by_label": {
+        "legitimate": {},
+        "phishing": {}
+      },
+      "live_urls_before_rewrite": {
+        "legitimate": {
+          "urls": 0,
+          "rows": 0
+        },
+        "phishing": {
+          "urls": 0,
+          "rows": 0
+        }
+      },
+      "suspicious_class_dependent_placeholders": []
+    },
+    "other_source_format_patterns": {
+      "square_bracket_span": {
+        "legitimate": {
+          "rows": 163,
+          "hits": 475
+        },
+        "phishing": {
+          "rows": 44,
+          "hits": 60
+        }
+      },
+      "brace_anon_token": {
+        "legitimate": {
+          "rows": 1,
+          "hits": 1
+        },
+        "phishing": {
+          "rows": 0,
+          "hits": 0
+        }
+      },
+      "dunder_anon_token": {
+        "legitimate": {
+          "rows": 0,
+          "hits": 0
+        },
+        "phishing": {
+          "rows": 0,
+          "hits": 0
+        }
+      },
+      "angle_pipe_token": {
+        "legitimate": {
+          "rows": 0,
+          "hits": 0
+        },
+        "phishing": {
+          "rows": 0,
+          "hits": 0
+        }
+      },
+      "html_deleted_marker": {
+        "legitimate": {
+          "rows": 16,
+          "hits": 16
+        },
+        "phishing": {
+          "rows": 0,
+          "hits": 0
+        }
+      }
+    },
+    "other_pattern_examples": [
+      {
+        "pattern": "square_bracket_span",
+        "label": "legitimate",
+        "sample": "[Ip-health]"
+      },
+      {
+        "pattern": "square_bracket_span",
+        "label": "legitimate",
+        "sample": "[R]"
+      },
+      {
+        "pattern": "html_deleted_marker",
+        "label": "legitimate",
+        "sample": "[alternative HTML deleted]"
+      },
+      {
+        "pattern": "square_bracket_span",
+        "label": "legitimate",
+        "sample": "[perl #42548]"
+      },
+      {
+        "pattern": "square_bracket_span",
+        "label": "phishing",
+        "sample": "[5]"
+      },
+      {
+        "pattern": "square_bracket_span",
+        "label": "legitimate",
+        "sample": "[9fans]"
+      },
+      {
+        "pattern": "square_bracket_span",
+        "label": "legitimate",
+        "sample": "[perl #42865]"
+      },
+      {
+        "pattern": "square_bracket_span",
+        "label": "legitimate",
+        "sample": "[Ip-health]"
+      }
+    ],
+    "class_dependent_other_patterns": []
+  },
+  "suspicious_text_artifacts": {
+    "placeholders_before_cleanup": [
+      {
+        "placeholder": "[NAME]",
+        "row_rate_legitimate": 0.7925,
+        "row_rate_phishing": 0.4326,
+        "note": "Class-dependent placeholder rate in source text before cleanup."
+      }
+    ],
+    "body_length": null,
+    "other_class_dependent_after_cleanup": [],
+    "simbol_note": "<|SIMBOL|> and similar MeAJOR markup tokens are removed by the same label-agnostic cleanup as other recognized source placeholders."
+  },
+  "validation": {
+    "ok": true,
+    "count": 2003,
+    "legitimate": 917,
+    "phishing": 1086,
+    "legitimate_pct": 45.78,
+    "phishing_pct": 54.22,
+    "loaded_by_generator": 2003
+  },
+  "output_csv": "C:\\Users\\ahmed\\Desktop\\AlbaPRJ\\Dataset-Generator\\data\\seeds\\content_seeds.csv",
+  "profile_note": "Seed labels do not choose technical profiles. Stage 3 must allocate profiles independently from DESIGN.md 1,000-base weights scaled to these class counts via largest remainder."
+}

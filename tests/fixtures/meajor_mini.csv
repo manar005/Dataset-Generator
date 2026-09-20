@@ -1,0 +1,43 @@
+sender,subject,body,label,language,source
+a@x,[ORGANIZATION] meeting,"Hello [NAME], please review the attached plan for next week. More words here.",0,en,trec5
+b@x,RE: Intranet Site,"The intranet update is scheduled for Monday morning office hours discussion.",0,en,trec5
+c@x,Failover plan,"Network failover notes for the operations team this quarter and next.",0,en,trec6
+d@x,Company information,"Quarterly company information packet for employees in the office.",0,en,trec6
+e@x,Open season,"Pipeline open season requests totaling several hundred units this year.",0,en,trec7
+f@x,Advertising agreement,"Internet advertising agreement draft for internal legal review only.",0,en,trec7
+g@x,Duplicate legit,"Exact duplicate body text used for exact-duplicate testing of legitimate mail.",0,en,trec5
+h@x,Duplicate legit,"Exact duplicate body text used for exact-duplicate testing of legitimate mail.",0,en,trec5
+i@x,Conflict,"This conflicting text is labeled both ways and must be excluded entirely from seeds.",0,en,trec5
+j@x,Conflict,"This conflicting text is labeled both ways and must be excluded entirely from seeds.",1,en,trec7
+k@x,French letter,"Bonjour ceci est un texte francais suffisamment long pour passer.",0,fr,trec5
+l@x,Empty body,"",0,en,trec5
+m@x,Live link,"Please read https://evil-live-example.test/steal for details of the office picnic plan.",0,en,trec5
+n@x,Placeholder url,"See [URL] for the published office calendar and related documents this month.",0,en,trec6
+o@x,More legit A,"Additional legitimate English text about scheduling a conference room tomorrow.",0,en,trec5
+p@x,More legit B,"Additional legitimate English text about travel reimbursement forms for staff.",0,en,trec6
+q@x,More legit C,"Additional legitimate English text about vendor invoices awaiting approval today.",0,en,trec7
+r@x,More legit D,"Additional legitimate English text about safety training attendance next Friday.",0,en,trec5
+s@x,More legit E,"Additional legitimate English text about mailbox migration for the finance team.",0,en,trec6
+t@x,More legit F,"Additional legitimate English text about printer access in the second building.",0,en,trec7
+u@x,Hey there,"Urgent request to confirm your mailbox quota with extra filler words for length.",1,en,trec5
+v@x,Buy product,"buy [PRODUCT] FROM [FINANCIAL_INFO] EACH replied open and more advertising words.",1,en,trec5
+w@x,Big legs,"Kiss those big legs goodbye with a long enough English advertising paragraph here.",1,en,trec6
+x@x,Account notice,"Your account access needs review please follow the internal notice for mailbox help.",1,en,trec6
+y@x,Prize mail,"You may have won a prize according to this long enough English advertising sample.",1,en,trec7
+z@x,Phish live,"Visit https://phish-live-example.test/drop to update mailbox settings for the team.",1,en,trec7
+aa@x,Phish placeholder,"Open [URL] to continue this long enough English advertising sample for testing.",1,en,trec5
+ab@x,Dup phish,"Repeated phishing advertising template used to test exact duplicate removal today.",1,en,trec5
+ac@x,Dup phish,"Repeated phishing advertising template used to test exact duplicate removal today.",1,en,trec5
+ad@x,More phish A,"Another phishing English paragraph about password reset assistance from support.",1,en,trec6
+ae@x,More phish B,"Another phishing English paragraph about delivery notification for a parcel today.",1,en,trec7
+af@x,More phish C,"Another phishing English paragraph about unpaid invoice copy requested by finance.",1,en,trec5
+ag@x,More phish D,"Another phishing English paragraph about mailbox storage warning from the help desk.",1,en,trec6
+ah@x,More phish E,"Another phishing English paragraph about wire transfer confirmation needed now.",1,en,trec7
+ai@x,en;en legit,"English language field with repeated en tokens for filtering tests of office mail.",0,en;en,trec5
+aj@x,mixed lang,"This mixed language row should be excluded because it is not purely English text.",0,de;en,trec5
+ak@x,Near dup one,"Near duplicate office scheduling paragraph about the conference room booking system 111.",0,en,trec5
+al@x,Near dup two,"Near duplicate office scheduling paragraph about the conference room booking system 222.",0,en,trec5
+am@x,Cleanup dup a,"Please review the attached office schedule for the staff meeting next week extra.",0,en,trec6
+an@x,Cleanup dup b,"Please review the attached office schedule for the [NAME] staff meeting next week extra.",0,en,trec6
+ao@x,Tokens only,"[NAME] [ORGANIZATION] [EMAIL_ADDRESS] [PHONE_NUMBER] [URL]",0,en,trec7
+ap@x,Phone simbol,"Call [PHONE_NUMBER] now <|SIMBOL|> and then reply with extra advertising words here.",1,en,trec5

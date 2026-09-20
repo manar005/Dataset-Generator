@@ -1,0 +1,2 @@
+# Stage 1 uses the Python standard library only.
+# Add dependencies here if later stages need them.
